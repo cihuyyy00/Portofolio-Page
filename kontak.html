@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <style>
+      * {
+        border: 1px red soli;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        background-color: #0084ff13;
+        margin: 0;
+        padding: 0;
+      }
+      h1 span {
+        background: linear-gradient(90deg, #0379f7, #3300ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-top: 1.7cm;
+      }
+      h2 {
+        margin-top: 1.5cm;
+      }
+      h2,
+      p {
+        margin-left: 1.2cm;
+      }
+      .mail {
+        border: 1px rgba(0, 0, 0, 0.381) solid;
+        border-radius: 10px;
+        background-color: white;
+        width: 60cap;
+        height: 50cap;
+        text-align: left;
+      }
+
+      .kontak {
+        max-width: 600px;
+        margin: 20px auto;
+      }
+      .row {
+        display: flex;
+        gap: 20px;
+      }
+      .form {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      label {
+        margin-bottom: 5px;
+        font-size: 12px;
+      }
+      input,
+      textarea {
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 12px;
+      }
+      textarea {
+        resize: vertical;
+        min-height: 80px;
+      }
+      button {
+        width: 100%;
+        margin-top: 20px;
+        height: 1.6pc;
+        cursor: pointer;
+        border-radius: 6px;
+        border: none;
+        color: white;
+        background-color: rgb(42, 127, 247);
+      }
+      button:hover {
+        background-color: rgb(13, 87, 182);
+        transition: 0.2s;
+      }
+      .group {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+      }
+      .inko {
+        display: grid;
+        gap: 20px;
+      }
+      .info {
+        border: 1px rgba(0, 0, 0, 0.381) solid;
+        width: 50cap;
+        height: 33cap;
+        border-radius: 10px;
+        background-color: white;
+      }
+      .konek {
+        border: 1px rgba(0, 0, 0, 0.381) solid;
+        width: 50cap;
+        height: 15cap;
+        border-radius: 10px;
+        background-color: white;
+      }
+      .konek h3 {
+        color: black;
+      }
+
+      .icon {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 30px;
+      }
+      .iconx {
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+      }
+      .icony {
+        display: flex;
+      }
+      .img {
+        background: #e6f0ff;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ccc;
+        border-radius: 10px;
+      }
+      .imgx {
+        background: #5757570c;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ccc;
+        border-radius: 10px;
+      }
+      .text {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+      }
+      .label {
+        font-weight: 500;
+        font-size: 14px;
+      }
+      .value {
+        color: #333;
+        font-size: 14px;
+      }
+
+      /* navbar */
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: white;
+        position: sticky;
+        top: 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav span {
+        background: linear-gradient(90deg, #0379f7, #3300ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+        display: inline-block;
+        font-size: 20px;
+      }
+
+      nav {
+        margin-right: 30px;
+      }
+      nav a {
+        margin-left: 20px;
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+      }
+
+      nav a:hover {
+        color: #007bff;
+        transition: 0.2s;
+      }
+
+
+      /* footer */
+      .kaki {
+        margin-top: 30px;
+        background-color: black;
+        color: rgb(169, 168, 168);
+      }
+      .kaki h2, h3 {
+        color: white;
+      }
+      footer {
+        display: flex;
+        justify-content: center;
+      }
+      .bawah {
+        text-align: left;
+        padding: 20px;
+      }
+      
+      .link {
+        display: grid;
+        gap: 20px;
+        text-align: left;
+      }
+      .link a {
+        text-decoration: none;
+        color: rgb(169, 168, 168);
+      }
+      .link a:hover {
+        color: white;
+        transition: 0.2s;
+      }
+      .item {
+        display: grid;
+      }
+      .bawahbet {
+        text-align: center;
+        font-size: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="nav">
+      <span>Faridh Muzakki</span>
+      <nav>
+        <a href="bru.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projek.html">Projects</a>
+        <a href="kontak.html">Contact</a>
+      </nav>
+    </div>
+    <h1>Contact <span>Me</span></h1>
+    <p>Ready to collaborate? Let's discuss your next project</p>
+
+    <section class="group">
+      <div class="mail">
+        <h2>Send a Message</h2>
+        <p>We waiting for you everytime</p>
+
+        <form class="kontak">
+          <div class="row">
+            <div class="form">
+              <label>Name</label>
+              <input type="text" name="name" placeholder="Your Name" required />
+            </div>
+
+            <div class="form">
+              <label>Email</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required
+              /><br /><br />
+            </div>
+          </div>
+
+          <div class="form">
+            <label>Subject</label>
+            <input
+              type="text"
+              name="subject"
+              placeholder="What's this about?"
+            /><br /><br />
+          </div>
+
+          <div class="form">
+            <label for="pesan">Message</label><br />
+            <textarea
+              name="pesan"
+              placeholder="Tell me about your project"
+            ></textarea>
+          </div>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <div class="inko">
+        <div class="info">
+          <h2>Contact Personal</h2>
+
+          <div class="icon">
+            <div class="img">
+              <img
+                width="25"
+                height="25"
+                src="https://img.icons8.com/ios/50/228BE6/mail.png"
+              />
+            </div>
+
+            <div class="text">
+              <span class="label">Email</span>
+              <span class="value">moezakieeey@gmail.com</span>
+            </div>
+          </div>
+
+          <div class="icon">
+            <div class="img">
+              <img
+                width="25"
+                src="https://img.icons8.com/?size=100&id=9659&format=png&color=228BE6"
+              />
+            </div>
+            <div class="text">
+              <span class="label">Phone</span>
+              <span class="value">+6282135496397</span>
+            </div>
+          </div>
+
+          <div class="icon">
+            <div class="img">
+              <img
+                width="25"
+                src="https://img.icons8.com/ios/50/7950F2/marker--v1.png"
+              />
+            </div>
+            <div class="text">
+              <span class="label">Location</span>
+              <span class="value">Ketapang, Kalimantan Barat</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="konek">
+            <h3>Connect With Me</h3>
+
+            <div class="icony">
+                <div class="iconx">
+                    <div class="imgx">
+                        <a href="https://github.com/cihuyyy00">
+                        <img 
+                        width="60"
+                        src="https://img.icons8.com/?size=100&id=4Z2nCrz5iPY2&format=png&color=1A1A1A" ></a>
+                    </div>
+                </div>
+
+                <div class="iconx">
+                    <div class="imgx">
+                        <a href="https://wa.me/+6282135496397">
+                        <img 
+                        width="40"
+                        src="https://img.icons8.com/?size=100&id=16712&format=png&color=1A1A1A" ></a>
+                    </div>
+                </div>
+
+                <div class="iconx">
+                    <div class="imgx">
+                        <a href="https://instagram.com/moezakkiyyy">
+                        <img 
+                        width="45"
+                        src="https://img.icons8.com/?size=100&id=32292&format=png&color=1A1A1A" ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="kaki">
+        <footer>
+            <div class="item">
+                <div class="row">
+                    <div class="bawah">
+                        <h2>Faridh Muzakki</h2>
+                        <p>Building robust, scalable server-side solutions. Let's build something amazing together.</p>
+                    </div>
+
+                    <div class="bawah">
+                        <h3>Quick Links</h3>
+
+                        <span class="link">
+                            <a href="bru.html">Home</a>
+                            <a href="about.html">About</a>
+                            <a href="projek.html">Projects</a>
+                            <a href="kontak.html">Contact</a>
+                        </span>
+                    </div>
+
+                    <div class="bawah">
+                        <h3>Services</h3>
+                        
+                        API Development <br><br>
+                        Database Design <br><br>
+                        System Architecture <br><br>
+                        Performance Optimization <br><br>
+                        Cloud Deploymen
+                    
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="bawahbet">
+                    © 2025 Faridh Muzakki. All rights reserved.
+                </div>
+            </div>
+        </footer>
+    </section>
+  </body>
+</html>
