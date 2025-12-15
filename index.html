@@ -10,66 +10,134 @@
     <!-- Navbar -->
     <div class="nav">
       <span>Faridh Muzakki</span>
-      <nav>
-        <a href="bru.html">Home</a>
+      <nav class="menu tampil">
+        <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="projek.html">Projects</a>
         <a href="kontak.html">Contact</a>
       </nav>
-    </div>
 
+      <button class="hamber">
+        <svg class="start" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"/></svg>
+        <svg class="close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"/></svg>
+      </button>
+    </div>
+    
     <!-- Hero Section -->
     <section class="hero" id="Home">
-      <h1>Hello, I'm <span>Faridh Muzakki</span></h1>
-      <h2>Backend Developer</h2>
-      <p>
-        Passionate backend developer with 3+ years of experience in building
-        scalable web applications. Specialized in Node.js, Python, and cloud
-        technologies. I love solving complex problems and optimizing system
-        performance.
-      </p>
-
-      <button
-        class="btn btn-primary"
-        onclick="window.location.href='projek.html'"
-      >
-        View My Work →
-      </button>
-
-      <!-- card -->
-      <span>
+      <div class="latar">
         <div>
+          <h1>Hello, I'm <br /><span>Faridh Muzakki</span></h1>
+          <h2>Backend & Web Developer</h2>
+          <p>
+            I am a beginner eager for knowledge, especially in programming. I lean
+            more towards backend (Laravel), but I also explore web development,
+            particularly WordPress. For those of you who want to create an
+            affordable website, this is the place.
+          </p>
+          
+          <button
+          class="btn btn-primary"
+          onclick="window.location.href='projek.html'"
+          >
+          View My Work →
+        </button>
+      </div>
+      <div class="image">
+        <img src="bleach.png">
+      </div>
+    </div>
+    <!-- card -->
+      <span class="logo">
+        <div class="icon">
           <img
             class="icon laravel"
             src="https://img.icons8.com/?size=40&id=hUvxmdu7Rloj&format=png&color=000000"
             alt=""
           />
-        </div>
 
-        <div>
           <img
             class="icon py"
             src="https://img.icons8.com/?size=40&id=12592&format=png&color=7950F2"
             alt=""
           />
-        </div>
 
-        <div>
           <img
             class="icon vsc"
             src="https://img.icons8.com/?size=40&id=9OGIyU8hrxW5&format=png&color=000000"
             alt=""
           />
-        </div>
 
-        <div>
           <img
             class="icon php"
             src="https://img.icons8.com/?size=40&id=UGYn5TapNioV&format=png&color=000000"
             alt=""
           />
+
+          <img
+            class="icon php"
+            src="https://img.icons8.com/?size=40&id=vK5is4aqGzbO&format=png&color=228BE6"
+            alt=""
+          />
+
+          <img
+            class="icon php"
+            src="https://img.icons8.com/?size=40&id=20909&format=png&color=000000"
+            alt=""
+          />
+
+          <img
+            class="icon php"
+            src="https://img.icons8.com/?size=40&id=7gdY5qNXaKC0&format=png&color=000000"
+            alt=""
+          />
+
+          <img
+            class="icon php"
+            src="https://img.icons8.com/?size=40&id=108784&format=png&color=000000"
+            alt=""
+          />
+
+          <img
+            class="icon php"
+            width="30"
+            src="https://images.seeklogo.com/logo-png/41/1/laragon-logo-png_seeklogo-412671.png"
+            alt=""
+          />
+          </div>
+          
+          
         </div>
       </span>
+    
     </section>
+    
+
   </body>
+
+  <script>
+    const carousel = document.querySelector(".icon");
+    const images = carousel.querySelectorAll("img");
+    let index = 5;
+
+    function slide() {
+      images.forEach((img) => img.classList.remove("active"));
+
+      images[index].classList.add("active");
+
+      // geser array
+      const first = carousel.firstElementChild;
+      carousel.appendChild(first);
+
+      // next index
+      index = (index + 1) % images.length;
+    }
+
+    // awal aktifin tengah
+    images[4].classList.add("active");
+    setInterval(slide, 2000);
+
+  </script>
+
+  <script src="main.js"></script>
 </html>
